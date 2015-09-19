@@ -8,8 +8,14 @@ public class BoardTest {
 
     @Test
     public void shouldBeEqualWhenComparingBoardToItself() {
-        Board board = new Board();
+        Cell[][] cells = {
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)}
+        };
+        Board board = new Board(cells);
 
         assertEquals(board, board);
     }
 }
+
