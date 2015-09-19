@@ -29,14 +29,29 @@ public class BoardTest {
     }
 
     @Test
-    public void ShouldGiveOneNeighbourWhenGridOfTwoCellsExixt() {
+    public void ShouldGiveFiveNeighboursWhenGridOfTwoNineCellsExixt() {
         Cell[][] cells = {
-                {new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)}
         };
         Board board = new Board(cells);
 
-        assertEquals(1, board.neighboursCountAt(0,1));
+        assertEquals(5, board.neighboursCountAt(0,1));
     }
+
+    @Test
+    public void ShouldGiveNumberOfNeighbourWhenGridOfNineCellsExixt() {
+        Cell[][] cells = {
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)},
+                {new Cell(true), new Cell(true), new Cell(true)}
+        };
+        Board b = new Board(cells);
+
+        assertEquals(3, b.neighboursCountAt(0,0));
+    }
+
 
 }
 

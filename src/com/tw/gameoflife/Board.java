@@ -27,13 +27,51 @@ public class Board {
         }
     }
 
+    public boolean isAlive(int row, int col) {
+        return grid[row][col].inState();
+    }
+
     public int neighboursCountAt(int row, int col) {
         int sum = 0;
-        if (row == 0 && col == 0) {
-            return sum;
+        if (row != 0 && col != 0) {
+            if (isAlive(row - 1, col - 1)) {
+                sum++;
+            }
         }
-        if (row == 0 && col == 1) {
-            sum = sum + 1;
+        if (row != 0) {
+            if (isAlive(row - 1, col)) {
+                sum++;
+            }
+        }
+        if (row != 0 && col != width - 1) {
+            if (isAlive(row - 1, col + 1)) {
+                sum++;
+            }
+        }
+        if (col != 0) {
+            if (isAlive(row, col - 1)) {
+                sum++;
+            }
+        }
+        if (col != width - 1) {
+            if (isAlive(row, col + 1)) {
+                sum++;
+            }
+        }
+        if (row != height - 1 && col != 0) {
+            if (isAlive(row + 1, col - 1)) {
+                sum++;
+            }
+        }
+        if (row != height - 1) {
+            if (isAlive(row + 1, col)) {
+                sum++;
+            }
+        }
+        if (row != height - 1 && col != width - 1) {
+            if (isAlive(row + 1, col + 1)) {
+                sum++;
+            }
         }
         return sum;
     }
