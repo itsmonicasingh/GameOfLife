@@ -2,17 +2,21 @@ package com.tw.gameoflife;
 
 public class Cell {
 
-    private boolean alive = false;
+    private boolean state;
 
-    public boolean isAlive() {
-        return alive;
+    public Cell(boolean state) {
+        this.state = state;
+    }
+
+    public boolean inState() {
+        return state;
     }
 
     public void revive() {
-        this.alive = true;
+        this.state = true;
     }
 
     public void kill() {
-        this.alive = false;
+        this.state = false;
     }
 }

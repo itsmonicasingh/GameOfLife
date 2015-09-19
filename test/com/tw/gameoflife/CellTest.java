@@ -9,23 +9,23 @@ public class CellTest {
 
     @Test
     public void shouldReturnFalseAsCellIsDeadInitially() {
-        Cell cell = new Cell();
+        Cell cell = new Cell(false);
 
-        assertFalse(cell.isAlive());
+        assertFalse(cell.inState());
     }
 
     @Test
     public void shouldReturnTrueAsAliveStatusWhenACellIsRevived() {
-        Cell cell = new Cell();
+        Cell cell = new Cell(true);
         cell.revive();
-        assertTrue(cell.isAlive());
+        assertTrue(cell.inState());
     }
 
     @Test
     public void shouldReturnAliveStatusAsFalseWhenCellIsKilled() {
-        Cell cell = new Cell();
+        Cell cell = new Cell(false);
         cell.revive();
         cell.kill();
-        assertFalse(cell.isAlive());
+        assertFalse(cell.inState());
     }
 }
