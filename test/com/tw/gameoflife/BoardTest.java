@@ -19,13 +19,23 @@ public class BoardTest {
     }
 
     @Test
-    public void testGetNeighbours() {
+    public void ShouldGiveZeroWhenNoNeigboursExist() {
         Cell[][] cells = {
                 {new Cell(true)}
         };
         Board board = new Board(cells);
 
         assertEquals(0, board.neighboursCountAt(0,0));
+    }
+
+    @Test
+    public void ShouldGiveOneNeighbourWhenGridOfTwoCellsExixt() {
+        Cell[][] cells = {
+                {new Cell(true), new Cell(true)},
+        };
+        Board board = new Board(cells);
+
+        assertEquals(1, board.neighboursCountAt(0,1));
     }
 
 }
