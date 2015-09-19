@@ -1,5 +1,6 @@
 package com.tw.gameoflife;
 
+//has a grid of cells and counts no of neighbours
 public class Board {
 
     private Cell[][] grid;

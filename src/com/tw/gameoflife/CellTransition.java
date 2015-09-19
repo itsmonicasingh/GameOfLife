@@ -1,5 +1,6 @@
 package com.tw.gameoflife;
 
+//has a cell and gives the new state of a cell
 public class CellTransition {
 
     private Cell cell;

@@ -1,5 +1,6 @@
 package com.tw.gameoflife;
 
+//has x and y coordinates and checks if two positions are identical
 public class Position {
 
     private int x;

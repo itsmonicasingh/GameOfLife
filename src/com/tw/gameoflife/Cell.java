@@ -1,5 +1,6 @@
 package com.tw.gameoflife;
 
+//has a state alive or dead
 public class Cell {
 
     private boolean state;
