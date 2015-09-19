@@ -11,4 +11,8 @@ public class Cell {
     public void revive() {
         this.alive = true;
     }
+
+    public void kill() {
+        this.alive = false;
+    }
 }

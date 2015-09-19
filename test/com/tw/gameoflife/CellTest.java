@@ -20,4 +20,12 @@ public class CellTest {
         cell.revive();
         assertTrue(cell.isAlive());
     }
+
+    @Test
+    public void shouldReturnAliveStatusAsFalseWhenCellIsKilled() {
+        Cell cell = new Cell();
+        cell.revive();
+        cell.kill();
+        assertFalse(cell.isAlive());
+    }
 }
