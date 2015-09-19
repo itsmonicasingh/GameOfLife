@@ -6,5 +6,6 @@ public class Main {
 
         UserInput userInput = new UserInput();
         userInput.getInput();
+
     }
 }

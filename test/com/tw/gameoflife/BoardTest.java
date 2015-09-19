@@ -17,5 +17,16 @@ public class BoardTest {
 
         assertEquals(board, board);
     }
+
+    @Test
+    public void testGetNeighbours() {
+        Cell[][] cells = {
+                {new Cell(true)}
+        };
+        Board board = new Board(cells);
+
+        assertEquals(0, board.neighboursCountAt(0,0));
+    }
+
 }
 
