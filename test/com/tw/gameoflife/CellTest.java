@@ -2,6 +2,7 @@ package com.tw.gameoflife;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -27,5 +28,14 @@ public class CellTest {
         cell.revive();
         cell.kill();
         assertFalse(cell.inState());
+    }
+
+    @Test
+    public void testUpdateState() {
+        Cell cell = new Cell(false);
+
+        cell.setNewState(true);
+        cell.updateState();
+        assertEquals(true, cell.inState());
     }
 }
