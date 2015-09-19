@@ -16,6 +16,16 @@ public class Position {
         if (this == o) {
             return true;
         }
-        return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Position that = (Position) o;
+        if (x != that.x) {
+            return false;
+        }
+        if (y != that.y) {
+            return false;
+        }
+        return true;
     }
 }
