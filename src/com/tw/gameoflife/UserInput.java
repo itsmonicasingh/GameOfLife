@@ -2,11 +2,15 @@ package com.tw.gameoflife;
 
 import java.util.Scanner;
 
-//takes input from the user
+//Reads The Console Input From The User And Returns It As A String.
 public class UserInput {
+    private Scanner scanner;
+
+    public UserInput(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public String getInput() {
-        Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
 }
